@@ -5,7 +5,7 @@
             http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
 
 	<!--  Data Source  for Sql Databse (Radar DataBase)-->
-	<!--  
+  
 	<bean id="accountingMindsDataSource" destroy-method="close"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
@@ -16,9 +16,8 @@
 		<property name="password" value="" />
 	</bean>	
 
--->
-	<!-- Database Property for MySql Database(Radar Databse) -->
-<!--
+<!-- Database Property for MySql Database(Radar Databse) -->
+
 	<bean id="mySqlHibernateProperties"
 		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="properties">
@@ -31,9 +30,9 @@
 		</property>
 	</bean>
 	
-	  -->
+	  
 	<!-- Hibernate SessionFactory -->
-	<!-- 
+	
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource">
@@ -59,7 +58,7 @@
 		<ref bean="accountingMindsDataSource" />
 	</property>
 </bean>
- -->
+ 
 <!-- 
 	  
 	<bean id="radarMySqlDao"
