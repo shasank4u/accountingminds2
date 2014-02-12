@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+            	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+
+	<!-- 
+	<aop:config>
+		<aop:advisor id="managerTx" advice-ref="txAdvice"
+			pointcut="execution(* *..service.*Service.*(..))" />
+	</aop:config>
+
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<tx:method name="get*" isolation="READ_COMMITTED"
+				propagation="SUPPORTS" read-only="true" />
+			<tx:method name="find*" isolation="READ_COMMITTED"
+				propagation="SUPPORTS" read-only="true" />
+			<tx:method name="*" isolation="READ_COMMITTED" />
+		</tx:attributes>
+	</tx:advice>
+ 
+	<bean id="radarService"
+		class="com.mindtree.bugsportz.business.service.RadarService">
+		<property name="radarSqlDao">
+			<ref bean="radarSqlDao" />
+		</property>
+		<property name="radarMySqlDao">
+			<ref bean="radarMySqlDao" />
+		</property>
+	</bean>
+
+	<bean id="registrationService"
+		class="com.mindtree.bugsportz.business.service.RegistrationService">
+		<property name="registrationDao">
+			<ref bean="registrationDao" />
+		</property>
+		<property name="mailService">
+			<ref bean="mailService" />
+		</property>
+	</bean>
+
+	<bean id="adminService"
+		class="com.mindtree.bugsportz.business.service.AdminService">
+		<property name="adminDao">
+			<ref bean="adminDao" />
+		</property>
+	</bean>
+	
+	-->
+	
+	
+</beans>
