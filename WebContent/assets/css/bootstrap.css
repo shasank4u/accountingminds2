@@ -5663,14 +5663,17 @@ a.thumbnail:focus {
 
 .media-object {
   display: block;
+  
 }
 
 .media-heading {
   margin: 0 0 5px;
+  
 }
 
 .media > .pull-left {
   margin-right: 10px;
+  
 }
 
 .media > .pull-right {
