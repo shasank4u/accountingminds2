@@ -29,7 +29,7 @@
     function EasyTicker( el, options ) {
 		
 		var s = this;
-		
+	
         s.opts = $.extend( {}, defaults, options );
         s.elem = $(el);
 		s.targ = $(el).children(':first-child');
@@ -74,21 +74,26 @@
 		
 		function init(){
 			
-			s.elem.children().css('margin', 0).children().css('margin', 0);
 			
-			s.elem.css({
+			//s.elem.children().css('margin', 0).children().css('margin', 0);
+		//alert(s.opts.height);
+			/*s.elem.css({
 				position : 'relative',
 				height: s.opts.height,
 				overflow : 'hidden'
-			});
+			});*/
+			
+			
 			
 			s.targ.css({
 				'position' : 'absolute',
 				'margin' : 0
 			});
 			
+			adjHeight();
+			
 			setInterval( function(){
-				adjHeight();
+				
 			}, 100);
 			
 		} // Init Method
@@ -149,6 +154,8 @@
 		}
 		
 		function fullHeight(){
+			
+			
 			var height = 0;
 			var tempDisp = s.elem.css('display'); // Get the current el display value
 			
@@ -165,14 +172,17 @@
 		}
 		
 		function visHeight( anim ){
+			
 			var wrapHeight = 0;
 			s.targ.children(':lt(' + s.opts.visible + ')').each(function(){
 				wrapHeight += $(this).outerHeight();
 			});
 			
 			if( anim == 1 ){
+			//alert(s.elem.attr("class"));
 				s.elem.stop(true, true).animate({height: wrapHeight}, s.opts.speed);
 			}else{
+				
 				s.elem.css( 'height', wrapHeight);
 			}
 		}
@@ -198,6 +208,7 @@
 
     // Attach the object to the DOM
     $.fn[name] = function ( options ) {
+    	
         return this.each(function () {
             if (!$.data(this, name)) {
                 $.data(this, name, new EasyTicker( this, options ));
